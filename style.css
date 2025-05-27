@@ -404,7 +404,6 @@ span{
 
 footer{
     display: flex;
-    flex-direction: column;
     gap: 20px;
     width: 100%;
     background-color: rgb(244,245,255);
@@ -535,7 +534,21 @@ footer{
     height: 50px;
 }
 
-
+@media screen and (max-width:1440px){
+    section{
+        justify-content: start;
+        margin-right: 60px;
+        padding-right: 60px;
+    }
+    .div-content-right{
+        margin-right: 50px;
+        padding-right: 50px;
+    }
+    footer{
+        margin-right: 70px;
+        padding-right: 60px;
+    }
+}
 
 @media screen  and (max-width: 1024px) {
     .card-container{
