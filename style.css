@@ -1,5 +1,21 @@
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+:root{
+    --color-principal:rgb(31,19,70);
+    --color-secundario:rgb(103,61,230);
+    --color-terciario:rgb(47,28,106);
+    --color-letras:white;
+}
+
+
+.text-colour{
+    color: var(--color-terciario);
+}
+
+
 
 *{
     box-sizing: border-box;
@@ -15,7 +31,14 @@
     font-size: 16px;
 }
 
+.text-mini{
+    font-size: 14px;
+    text-decoration: none;
+}
+
 main{
+    width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,15 +47,15 @@ main{
 header{
     display: flex;
     justify-content: space-between;
-    background-color: white;
-    position: fixed;
-    width: 1557px;
+    width: 100%;
     height: 88px;
-    padding: 20px 40px;
-    gap: 100px;
+    padding: 20px 40px 20px 10px;
+    gap: 90px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.244);
     position: sticky;
     top: 0;
+    background-color: rgb(255, 255, 255);
+    z-index: 1000;
 }
 
 .div-left-content{
@@ -43,12 +66,13 @@ header{
     flex: 1;
 }
 
-.container-anclas{
+nav{
     display: flex;
-    gap: 20px;
+    gap: 33px;
+    height: 88px;
 }
 
-.container-anclas .content-anclas .bi-chevron-down{
+nav .content-anclas .bi-chevron-down{
     font-weight: bold;
 }
 
@@ -60,12 +84,13 @@ header{
 }
 
 .Log-in{
-    width: 80px;
-    height: 48px;
+    width: 98px;
+    height: 50px;
     border: 2px solid black;
     border-radius: 8px;
     padding: 10px;
     text-align: center;
+    background-color: red;
 }
 
 
@@ -75,6 +100,11 @@ header{
     align-items: center;
 
 }
+
+.div-content-right .flag img{
+    width: 30px;
+    height: 20px;
+}
 .container-a2{
     text-decoration: none;
     font-weight: bold;
@@ -83,10 +113,17 @@ header{
 span{
     font-weight: bold;
 }
+
+.container-img{
+    width: 187px;
+    height: 88px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .container-img img{
     width: 157px;
-    height: 78px;
-    flex:2;
+    height: 72px;
 }
 
 .div-content-right img{
@@ -97,63 +134,248 @@ span{
 .content-anclas{
     text-decoration: none;
     display: flex;
-    gap:10px;
-    align-items: center;
-}
-
-
-.hero{
-    width: 100%;
-    height:732px;
-    display: flex;
+    gap:3px;
     align-items: center;
 }
 
 .content-img img{
-    width: 786px;
-    height: 583px;
+    width: 925px;
+    height: 630px;
     display: flex;
     align-items: center;
-    justify-content: right;
-    
+    margin-top: 20px;
 }
 
-.content-hero{
-    width: 786px;
-    height: 583px;
+section{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    padding-bottom: 8px;
+}
+
+
+.hero{
+    width: 35%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -30px;
+    left: 30px;
+}
+
+.content-span{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 150px;
+    left: 90px;
+}
+
+.bi-check2{
+    padding-right: 10px;
+    color: rgb(15,181,151);
+}
+
+.title{
+    width: 406px;
+    height: 80px;
+    font-size: 36px;
+    line-height: 1.2;
+    position: absolute;
+    top: 20px;
+    left: 90px;
+    z-index: 100px;
+}
+
+.text-secundary{
+    width: 446px;
+    height: 32px;
+    font-size: 20px;
+    background-color: blac;
+    position: absolute;
+    top: 110px;
+    left:90px;
+    font-weight: bold;
+}
+
+b{
+    color: rgb(121,77,230);
+    font-size: 20px;
+}
+
+.content-price{
+    width: 200px;
+    height: 70px;
+    display:inline-flex;
+    position: absolute;
+    top: 260px;
+    left: 90px;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.span-special{
+    font-size: 48px;
+    position: relative;
+    top: -10px;
+}
+
+
+.text-secundary-div{
+    position: absolute;
+    top: 330px;
+    left: 90px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.content-links{
+    display: flex;
+    position: absolute;
+    top: 380px;
+    left: 90px;
+    gap: 12px;
+}
+
+.btn-plan{
+    width: 189px;
+    height: 48px;
+    background-color: var(--color-secundario);
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+}
+
+.btn-timer{
+    width: 168px;
+    height: 48px;
+    background-color: rgb(226,219,252);
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+}
+
+.text-span-bottom{
+    width: 400px;
+    position: absolute;
+    top: 435px;
+    left: 90px;
+    margin-left: 40px;
+}
+
+.bi-shield-check{
+    position: absolute;
+    top:430px;
+    left: 90px;
+}
+
+.content-img{
+    width: 55%;
+    height: 100%;
+}
+
+
+.text-medium{
+    color: white;
+}
+
+.container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 30px;
     gap: 30px;
+    background-color: var(--color-principal);
+    width: 100%;
 }
 
-.title{
-    width: 456px;
-    height: 80px;
-    font-size: 36px;
-    color:rgb(31,19,70);
-    text-align:start;
-}
-
-
-
-.div-button{
+.title-container{
     display: flex;
-    width: 456px;
-    height: 38px;
-    gap: 16px;
+    flex-direction: column;
+    gap: 25px;
+    width: 1100px;
 }
 
-button{
-    width: 200px;
+.title-h2{
+    font-size: 40px;
+    font-family: sans-serif;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+.head-p{
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.card-container{
+    display: flex;
+    flex-direction: row;
+    width: 900px;
+    gap:20px;
+    justify-content: center;
+}
+
+.card-review{
+    display: flex;
+    flex-direction:column;
+    width: 708px;
+    height: 258px;
+    background-color: var(--color-terciario);
+    padding: 32px;
+    gap: 20px;
+    border-radius: 15px;
+}
+
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-secundario);
+    position: relative;
+}
+
+.bi{
+    font-size: 25px;
 }
 
 
+.primary-bottom{
+    background-color: var(--color-secundario);
+    text-decoration: none;
+    width: 189.8px;
+    height: 48px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 12px 48px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
 
-
-
+.card-review-p{
+    width: 300px;
+    height: 40px;
+}
 
 
 .button-fix{
@@ -166,18 +388,37 @@ button{
     width: 190px;
     height: 40px;
     position: fixed;
-    top: 670px;
-    left: 1300px;
+    top: 750px;
+    left: 1470px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 5px;
     padding: 4px;
+    z-index: 100;
 }
 
 span{
     font-weight: bold;
 }
+
+footer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    background-color: rgb(244,245,255);
+    position: relative;
+}
+
+.footer-conteiner-divs{
+    position: absolute;
+    left: 210px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .bi-chat-right-text{
     width: 14px;
@@ -185,3 +426,271 @@ span{
     color: white;
 }
 
+.div-top img{
+    width: 157px;
+    height: 72px;
+}
+
+.div-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.social-networks{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding-right: 60px;
+    position: absolute;
+    left: 890px;
+}
+
+.div-medium-left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    position: absolute;
+    top: 70px;
+    left: 210px;
+
+}
+
+.div-medium{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -24px;
+    margin-right: 24px;
+    padding-right: 60px;
+    position: absolute;
+    top: 90px;
+    left: 850px;
+    gap:5px;
+    width: 500px;
+}
+
+.div-medium-right-pay{
+    display: flex;
+    align-items: center;
+    gap: 2.5px;
+    margin-top:-12px;
+}
+
+.div-medium-left-pay{
+    display: flex;
+    align-items: center;
+    gap: 2.5px;
+    margin-top:-12px;
+}
+
+.div-medium-pay a{
+    text-decoration: none;
+}
+
+.div-bottom{
+    margin-top: 24px;
+    padding-right: 60px;
+    position: absolute;
+    left: 210px;
+    top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.div-bottom-p{
+    margin-top: 24px;
+    padding-right: 60px;
+    position: absolute;
+    left: 1100px;
+    top: 100px;
+    width: 270px;
+}
+
+.bi-lightning-charge{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top:6px;
+    left: 8px;
+}
+
+.bi-list-ul{
+    position: absolute;
+    top: 6px;
+}
+
+.bi-check-circle{
+    position: absolute;
+    top: 6px;
+}
+
+.icon-target{
+    width: 50px;
+    height: 50px;
+}
+
+
+
+@media screen  and (max-width: 1024px) {
+    .card-container{
+        display:flex;
+        flex-direction: column;
+        width: 800px;
+    }
+    .container{
+        width: 100%;
+    }
+    .card-review{
+        width: 420px;
+    } 
+    .title-h2{
+        text-align: center;
+        width: 400px;
+    }
+    .title-container{
+        width: 750px;
+    }
+    .head-p{
+        width: 400px;
+    }
+    .div-top{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .div-medium{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 15px;
+        left: 30px;
+    }
+    .div-bottom{
+        position: absolute;
+        left: 30px;
+        top: 480px;
+    }
+    .div-bottom-p{
+        position: absolute;
+        left: 30px;
+        top: 460px;
+    }
+    .div-medium-left{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 350px;
+        left: 30px;
+    }
+    .div-top img{
+        position: absolute;
+        left: -170px;
+        top:250px;
+    }
+    .social-networks{
+        position: absolute;
+        top: 100px;
+        left: -170px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .div-medium{
+        width: 900px;
+        position: absolute;
+        left: -230px;
+        top: 220px;
+    }
+    section{
+        display: flex;
+        flex-direction: column;
+        gap: 400px;
+        align-items: start;
+    }
+    .content-img img{
+        width: 686px;
+        height: 483px;
+    }
+    .div-medium-top{
+        width: 100px;
+    }
+    .medium{
+        width: 100px;
+    }
+    .div-medium-bottom{
+        width: 100px;
+    }
+    nav{
+        display: none;
+    }
+    .flag{
+        display: none;
+    }
+    .Log-in{
+        display: none;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 320px) {
+    header{
+        min-width: 900px;
+        position: relative;
+    }
+    .container-img{
+        position: absolute;
+        left: 300px;
+    }
+    section{
+        position: relative;
+        gap: 550px;
+    }
+    .content-img img{
+        max-width: 486px;
+        height: 383px;
+    }
+    .card-container{
+        display:flex;
+        flex-direction: column;
+        max-width: 300px;
+    }
+    .title-container{
+        max-width: 300px;
+    }
+    .container{
+        min-width: 840px;
+    }
+    .content-span{
+        display: flex;
+    
+    }
+    .content-price{
+        position: absolute;
+        top: 410px;
+        left: 90px;
+    }
+    .text-secundary-div{
+        position: absolute;
+        top: 451px;
+        font-size: 10px;
+        
+    }
+    .content-links{
+        position: absolute;
+        top: 490px;
+        left: 90px;
+    }
+    .text-span-bottom{
+        position: absolute;
+        top:550px
+    }
+    .bi-shield-check{
+        position: absolute;
+        top:550px
+    }
+}
